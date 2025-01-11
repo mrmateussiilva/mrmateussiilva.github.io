@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth; /* Rolagem suave */
+        }
+
+        /* Cores personalizadas */
+        .bg-main {
+            background: linear-gradient(to right, #1e3a8a, #3b82f6); /* Azul degradê */
+        }
+
+        .bg-light {
+            background-color: #f0f9ff; /* Azul claro */
+        }
+
+        .bg-accent {
+            background-color: #3b82f6; /* Azul vibrante */
+        }
+
+        .text-main {
+            color: #1e3a8a; /* Azul escuro */
+        }
+
+        .text-light {
+            color: #3b82f6; /* Azul vibrante */
+        }
+
+        .text-accent {
+            color: #2563eb; /* Azul mais suave */
+        }
+
+        .hover\:bg-accent:hover {
+            background-color: #2563eb;
+        }
+
+        /* Customização de campos de formulário */
+        input, textarea {
+            border-radius: 0.375rem;
+            border: 1px solid #cbd5e0;
+            padding: 0.75rem;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+
+<body class="bg-light text-gray-900">
+
+    <!-- Header -->
+    <header class="bg-main text-white py-12">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-extrabold mb-4">Olá, sou Mateus José da Silva </h1>
+            <p class="text-xl">Desenvolvedor de Software | Criando soluções inovadoras</p>
+        </div>
+    </header>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl font-bold text-main mb-6">Sobre Mim</h2>
+                    <p class="text-lg mb-6">Sou um desenvolvedor apaixonado por criar soluções de software que ajudam
+                        a transformar ideias em realidade. Com experiência em diversas tecnologias, busco sempre melhorar
+                        minhas habilidades e enfrentar novos desafios.</p>
+                    <a href="#contato"
+                        class="bg-accent text-white py-3 px-8 rounded-full text-lg hover:bg-blue-600 transition duration-300">Vamos
+                        Conversar</a>
+                </div>
+       
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-main mb-8">Meus Projetos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Projeto 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                    <img src="https://via.placeholder.com/300" alt="Projeto 1" class="mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-main mb-2">Projeto 1</h3>
+                    <p class="text-gray-700 mb-4">Descrição do Projeto 1: Um sistema que resolve [descreva o problema].
+                        Construído com [tecnologias usadas].</p>
+                    <a href="https://github.com" class="text-accent hover:text-blue-600">Ver no GitHub</a>
+                </div>
+                <!-- Projeto 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                    <img src="https://via.placeholder.com/300" alt="Projeto 2" class="mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-main mb-2">Projeto 2</h3>
+                    <p class="text-gray-700 mb-4">Descrição do Projeto 2: Uma aplicação que ajuda [descreva o problema].
+                        Desenvolvido com [tecnologias usadas].</p>
+                    <a href="https://github.com" class="text-accent hover:text-blue-600">Ver no GitHub</a>
+                </div>
+                <!-- Projeto 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                    <img src="https://via.placeholder.com/300" alt="Projeto 3" class="mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-main mb-2">Projeto 3</h3>
+                    <p class="text-gray-700 mb-4">Descrição do Projeto 3: Um aplicativo que resolve [descreva o problema].
+                        Usando [tecnologias usadas].</p>
+                    <a href="https://github.com" class="text-accent hover:text-blue-600">Ver no GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="bg-main text-white py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-light mb-8">Entre em Contato</h2>
+            <p class="text-lg mb-6">Fique à vontade para entrar em contato comigo. Estou disponível para novas
+                oportunidades e projetos!</p>
+            <form action="#" method="POST" class="w-full max-w-lg mx-auto">
+                <div class="flex flex-col mb-4">
+                    <label for="nome" class="text-left text-lg font-semibold">Nome</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome"
+                        class="border-gray-300 border-2 rounded-md py-2 px-4 mt-2">
+                </div>
+                <div class="flex flex-col mb-4">
+                    <label for="email" class="text-left text-lg font-semibold">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="Seu e-mail"
+                        class="border-gray-300 border-2 rounded-md py-2 px-4 mt-2">
+                </div>
+                <div class="flex flex-col mb-4">
+                    <label for="mensagem" class="text-left text-lg font-semibold">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" required placeholder="Sua mensagem"
+                        class="border-gray-300 border-2 rounded-md py-2 px-4 mt-2 h-32"></textarea>
+                </div>
+                <button type="submit"
+                    class="bg-accent text-white py-3 px-8 rounded-full text-lg hover:bg-blue-600 transition duration-300">Enviar
+                    Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-main text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Mateus Jose da Silva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
