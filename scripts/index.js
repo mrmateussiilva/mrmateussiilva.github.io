@@ -22,7 +22,7 @@ createApp({
     return {
       textToType: "Olá, sou Mateus José da Silva ",
       typedText: "",
-      typingSpeed: 100, // Velocidade em ms
+      typingSpeed: 150, // Velocidade em ms
     };
   },
   mounted() {
