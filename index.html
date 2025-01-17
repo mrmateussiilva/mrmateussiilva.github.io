@@ -8,55 +8,7 @@
     <title>Meu Portfólio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            scroll-behavior: smooth; /* Rolagem suave */
-        }
-
-        /* Cores personalizadas */
-        .bg-main {
-            background: linear-gradient(to right, #1e3a8a, #3b82f6); /* Azul degradê */
-        }
-
-        .bg-light {
-            background-color: #f0f9ff; /* Azul claro */
-        }
-
-        .bg-accent {
-            background-color: #3b82f6; /* Azul vibrante */
-        }
-
-        .text-main {
-            color: #1e3a8a; /* Azul escuro */
-        }
-
-        .text-light {
-            color: #3b82f6; /* Azul vibrante */
-        }
-
-        .text-accent {
-            color: #2563eb; /* Azul mais suave */
-        }
-
-        .hover\:bg-accent:hover {
-            background-color: #2563eb;
-        }
-
-        /* Customização de campos de formulário */
-        input, textarea {
-            border-radius: 0.375rem;
-            border: 1px solid #cbd5e0;
-            padding: 0.75rem;
-            width: 100%;
-            margin-bottom: 1rem;
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #3b82f6;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/base.css">
 </head>
 
 <body class="bg-light text-gray-900">
@@ -93,7 +45,7 @@
     <section id="projetos" class="py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold text-main mb-8">Meus Projetos</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Projeto 1 -->
                 <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
                     <h3 class="text-xl font-semibold text-main mb-2">To-do list </h3>
@@ -109,13 +61,7 @@
                         Desenvolvido com Python3, flask e Bootstrap.</p>
                     <a href="https://github.com/mrmateussiilva/SGPMaratonaCODE" target="_blank" class="text-accent hover:text-blue-600">Ver no GitHub</a>
                 </div>
-                <!-- Projeto 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-                    <h3 class="text-xl font-semibold text-main mb-2">Projeto 3</h3>
-                    <p class="text-gray-700 mb-4">Descrição do Projeto 3: Um aplicativo que resolve [descreva o problema].
-                        Usando [tecnologias usadas].</p>
-                    <a href="https://github.com" class="text-accent hover:text-blue-600">Ver no GitHub</a>
-                </div>
+
             </div>
         </div>
     </section>

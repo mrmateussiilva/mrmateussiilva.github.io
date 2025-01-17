@@ -1,0 +1,47 @@
+body {
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+/* Cores personalizadas */
+.bg-main {
+    background: linear-gradient(to right, #1e3a8a, #3b82f6); /* Azul degradê */
+}
+
+.bg-light {
+    background-color: #f0f9ff; /* Azul claro */
+}
+
+.bg-accent {
+    background-color: #3b82f6; /* Azul vibrante */
+}
+
+.text-main {
+    color: #1e3a8a; /* Azul escuro */
+}
+
+.text-light {
+    color: #3b82f6; /* Azul vibrante */
+}
+
+.text-accent {
+    color: #2563eb; /* Azul mais suave */
+}
+
+.hover\:bg-accent:hover {
+    background-color: #2563eb;
+}
+
+/* Customização de campos de formulário */
+input, textarea {
+    border-radius: 0.375rem;
+    border: 1px solid #cbd5e0;
+    padding: 0.75rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
