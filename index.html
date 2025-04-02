@@ -1,130 +1,428 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-br" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Meu Portfólio</title>
+    <title>Mateus | Artista de Código</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
-    <link rel="stylesheet" href="assets/css/base.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        accent: '#06b6d4',
+                        dark: '#111827'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .geometric-bg {
+            background-image: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, rgba(99, 102, 241, 0.05) 90%);
+        }
+        
+        .code-text {
+            font-family: 'Fira Code', monospace, consolas;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
+<body class="dark:bg-dark text-gray-100 geometric-bg min-h-screen">
 
-<body class="bg-light text-gray-900">
-
-    <!-- Header -->
-    <header class="bg-main text-white py-12">
-        <div class="container mx-auto text-center" id="app">
-            <h1 class="text-5xl font-extrabold mb-4">
-                <span>{{ typedText }}</span>
-            </h1>
-            <p class="text-xl">Desenvolvedor de Software | Realizando sonhos através de código</p>
-        </div>
-    </header>
-
-    <!-- Sobre -->
-    <section id="sobre" class="py-20">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-4/5 text-center md:text-left">
-                    <h2 class="text-4xl font-bold text-main mb-6">Sobre Mim</h2>
-                    <p class="text-lg mb-6">Sou um desenvolvedor apaixonado por criar soluções de software que ajudam
-                        a transformar ideias em realidade. Com experiência em diversas tecnologias, busco sempre melhorar
-                        minhas habilidades e enfrentar novos desafios.</p>
-                    <a href="#contato"
-                        class="bg-accent text-white py-3 px-8 rounded-full text-lg hover:bg-blue-600 transition duration-300">Vamos
-                        Conversar</a>
+    <!-- Navigation -->
+    <nav class="bg-gray-900/70 fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="text-xl font-bold code-text text-primary">
+                    <span class="text-white">&lt;</span>Mateus<span class="text-accent">/</span><span class="text-white">&gt;</span>
                 </div>
-       
+                <div class="hidden md:flex space-x-4">
+                    <a href="#home" class="px-3 py-2 text-primary hover:text-white">Home</a>
+                    <a href="#sobre" class="px-3 py-2 text-gray-300 hover:text-white">Sobre</a>
+                    <a href="#projetos" class="px-3 py-2 text-gray-300 hover:text-white">Projetos</a>
+                    <a href="#blog" class="px-3 py-2 text-gray-300 hover:text-white">Blog</a>
+                    <a href="#contato" class="px-3 py-2 text-gray-300 hover:text-white">Contato</a>
+                </div>
+                <button id="menu-toggle" class="md:hidden text-gray-400 hover:text-white">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
+                        <h1 class="text-4xl font-bold mb-2">
+                            <span class="text-white">Olá, eu sou</span>
+                            <span class="block text-primary">Mateus</span>
+                        </h1>
+                        <h2 class="text-xl text-gray-300 mb-4">
+                            Artista de Código &amp; Criador de Soluções
+                        </h2>
+                        <div class="bg-gray-900 p-4 rounded-md code-text text-sm text-green-400 mt-4">
+                            <p>&gt; const <span class="text-primary">minhaMissão</span> = () =&gt; {</p>
+                            <p class="pl-4">return "<span class="text-white">Transformar problemas complexos em</span></p> 
+                            <p class="pl-4"><span class="text-white">soluções elegantes através do código</span>";</p>
+                            <p>};</p>
+                        </div>
+                        <div class="mt-6 flex gap-4">
+                            <a href="#projetos" class="px-6 py-2 bg-primary hover:bg-primary/80 text-white rounded-md">
+                                Ver Projetos
+                            </a>
+                            <a href="#contato" class="px-6 py-2 border border-primary text-primary hover:bg-primary/10 rounded-md">
+                                Contato
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative h-64 w-64">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="h-48 w-48 border-4 border-accent rotate-45 opacity-10"></div>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="h-40 w-40 border-4 border-primary -rotate-45 opacity-10"></div>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-8xl float">
+                                <i class="fas fa-code text-white opacity-80"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Projetos -->
-    <section id="projetos" class="py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold text-main mb-8">Meus Projetos</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Projeto 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-                    <h3 class="text-xl font-semibold text-main mb-2">To-do list </h3>
-                    <p class="text-gray-700 mb-4">Um simples to-do list pra me ajudar na hora de delegar as tarefas que se encontram pendentes.
-                        Construído com Vue.js, Tailwindcss,Html5 e Javascript.</p>
-                    <a href="https://github.com/mrmateussiilva/todo-vuejs" target="_blank" class="text-accent hover:text-blue-600">Ver no GitHub</a>
+    <!-- About Section -->
+    <section id="sobre" class="py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <span class="text-primary code-text">// Sobre mim</span>
+                <h2 class="text-3xl font-bold mt-2">O artista por trás do código</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-900 rounded-lg p-4">
+                    <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary/20 mb-4">
+                        <i class="fas fa-user-astronaut text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Minha Jornada</h3>
+                    <p class="text-gray-400 text-sm">Sou apaixonado por criar soluções que combinam funcionalidade e estética, vendo cada linha de código como uma pincelada em uma tela digital.</p>
                 </div>
-                <!-- Projeto 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-                    <h3 class="text-xl font-semibold text-main mb-2">Sistema de Gestão Pedidos</h3>
-                    <p class="text-gray-700 mb-4">
-                        A ideia é que esse sistema é de uma maneira mais facil conseguir interconectar todos setores de uma forma onde a maioria dos erros possam ser mitigados e até mesmo previsto.
-                        Desenvolvido com Python3, flask e Bootstrap.</p>
-                    <a href="https://github.com/mrmateussiilva/SGPMaratonaCODE" target="_blank" class="text-accent hover:text-blue-600">Ver no GitHub</a>
+                
+                <div class="bg-gray-900 rounded-lg p-4">
+                    <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary/20 mb-4">
+                        <i class="fas fa-laptop-code text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Habilidades</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between items-center">
+                            <span>Front-end</span>
+                            <div class="w-24 h-1 bg-gray-700 rounded-full overflow-hidden">
+                                <div class="w-4/5 h-full bg-primary"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Back-end</span>
+                            <div class="w-24 h-1 bg-gray-700 rounded-full overflow-hidden">
+                                <div class="w-3/5 h-full bg-primary"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>UX/UI</span>
+                            <div class="w-24 h-1 bg-gray-700 rounded-full overflow-hidden">
+                                <div class="w-4/5 h-full bg-primary"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
+                
+                <div class="bg-gray-900 rounded-lg p-4">
+                    <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary/20 mb-4">
+                        <i class="fas fa-cogs text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Tecnologias</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-gray-800 rounded-full text-xs">JavaScript</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded-full text-xs">React</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded-full text-xs">Node.js</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded-full text-xs">Python</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded-full text-xs">Tailwind</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-gray-900 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-2">
+                    <i class="fas fa-quote-left text-accent"></i>
+                    <h3 class="text-lg font-bold">"O Código e o Bug"</h3>
+                </div>
+                <p class="text-gray-300 text-sm">
+                    Meu blog é uma expressão da minha filosofia como programador. Para mim, códigos são mais que instruções—são expressões artísticas que resolvem problemas do mundo real.
+                </p>
             </div>
         </div>
     </section>
-    <section id="tecnologias" class="py-20 bg-light">
-        <div class="container mx-auto px-6">
-          <h2 class="text-4xl font-bold text-main text-center mb-12">Tecnologias que Eu Domino</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Card 1 -->
-            <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition duration-300 text-center">
-              <h3 class="text-2xl font-semibold text-main mb-4">Front-End</h3>
-              <p class="text-gray-700">Experiência com frameworks como <span class="text-accent">Vue.js</span>, <span class="text-accent">React</span>, e estilização com <span class="text-accent">Tailwind CSS</span> e <span class="text-accent">Bootstrap</span>.</p>
-            </div>
-            <!-- Card 2 -->
-            <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition duration-300 text-center">
-              <h3 class="text-2xl font-semibold text-main mb-4">Back-End</h3>
-              <p class="text-gray-700">Domínio de linguagens como <span class="text-accent">Python</span>, <span class="text-accent">Node.js</span>, e uso de frameworks como <span class="text-accent">Flask</span> e <span class="text-accent">Express</span>.</p>
-            </div>
-            <!-- Card 3 -->
-            <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition duration-300 text-center">
-              <h3 class="text-2xl font-semibold text-main mb-4">Banco de Dados</h3>
-              <p class="text-gray-700">Habilidade com <span class="text-accent">MySQL</span>, <span class="text-accent">PostgreSQL</span>, e bancos NoSQL como <span class="text-accent">MongoDB</span>.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
 
-    <!-- Contato -->
-    <section id="contato" class="bg-main text-white py-20">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-light mb-8">Entre em Contato</h2>
-            <p class="text-lg mb-6">Fique à vontade para entrar em contato comigo. Estou disponível para novas
-                oportunidades e projetos!</p>
-            <form action="#" method="POST" class="w-full max-w-lg mx-auto">
-                <div class="flex flex-col mb-4">
-                    <label for="nome" class="text-left text-lg font-semibold">Nome</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Seu nome"
-                        class="border-gray-300 border-2 rounded-md py-2 px-4 mt-2">
+    <!-- Projects Section -->
+    <section id="projetos" class="py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <span class="text-primary code-text">/* Projetos */</span>
+                <h2 class="text-3xl font-bold mt-2">Meus trabalhos recentes</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="h-48 bg-gray-800 flex items-center justify-center">
+                        <div class="text-4xl text-primary">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-bold">Sistema de Gestão</h3>
+                            <div class="flex space-x-2">
+                                <span class="text-xs px-2 py-1 bg-primary/20 text-primary rounded">React</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-3">Sistema completo de gestão empresarial com dashboards interativos.</p>
+                        <div class="flex space-x-4 text-sm">
+                            <a href="#" class="text-primary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="text-primary">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-col mb-4">
-                    <label for="email" class="text-left text-lg font-semibold">E-mail</label>
-                    <input type="email" id="email" name="email" required placeholder="Seu e-mail"
-                        class="border-gray-300 border-2 rounded-md py-2 px-4 mt-2">
+                
+                <!-- Project 2 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="h-48 bg-gray-800 flex items-center justify-center">
+                        <div class="text-4xl text-primary">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-bold">App de Produtividade</h3>
+                            <div class="flex space-x-2">
+                                <span class="text-xs px-2 py-1 bg-primary/20 text-primary rounded">React Native</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-3">Aplicativo mobile para gerenciamento de tarefas com sistema de gamificação.</p>
+                        <div class="flex space-x-4 text-sm">
+                            <a href="#" class="text-primary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="text-primary">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-col mb-4">
-                    <label for="mensagem" class="text-left text-lg font-semibold">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" required placeholder="Sua mensagem"
-                        class="border-gray-300 border-2 rounded-md py-2 px-4 mt-2 h-32"></textarea>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <span class="text-primary code-text">// Blog</span>
+                <h2 class="text-3xl font-bold mt-2">O Código e o Bug</h2>
+                <p class="text-gray-400 mt-2 text-sm">Compartilhando conhecimento sobre programação.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Blog Post 1 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="h-32 bg-gray-800 flex items-center justify-center">
+                        <div class="text-3xl text-primary">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-2">Clean Code: A Arte da Legibilidade</h3>
+                        <p class="text-gray-400 text-xs mb-3">
+                            Uma reflexão sobre como escrever códigos elegantes e fáceis de manter.
+                        </p>
+                        <div class="flex justify-between text-xs">
+                            <span class="text-gray-500">12 Mar 2025</span>
+                            <a href="#" class="text-primary">
+                                Ler mais <i class="fas fa-chevron-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <button type="submit"
-                    class="bg-accent text-white py-3 px-8 rounded-full text-lg hover:bg-blue-600 transition duration-300">Enviar
-                    Mensagem</button>
-            </form>
+                
+                <!-- Blog Post 2 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="h-32 bg-gray-800 flex items-center justify-center">
+                        <div class="text-3xl text-primary">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-2">O Bug Como Professor</h3>
+                        <p class="text-gray-400 text-xs mb-3">
+                            Como transformar erros em oportunidades de aprendizado.
+                        </p>
+                        <div class="flex justify-between text-xs">
+                            <span class="text-gray-500">28 Fev 2025</span>
+                            <a href="#" class="text-primary">
+                                Ler mais <i class="fas fa-chevron-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="h-32 bg-gray-800 flex items-center justify-center">
+                        <div class="text-3xl text-primary">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-2">Otimização: Beleza na Velocidade</h3>
+                        <p class="text-gray-400 text-xs mb-3">
+                            Técnicas para tornar sua aplicação rápida e eficiente.
+                        </p>
+                        <div class="flex justify-between text-xs">
+                            <span class="text-gray-500">15 Fev 2025</span>
+                            <a href="#" class="text-primary">
+                                Ler mais <i class="fas fa-chevron-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <span class="text-primary code-text">// Contato</span>
+                <h2 class="text-3xl font-bold mt-2">Vamos Conversar</h2>
+            </div>
+            
+            <div class="bg-gray-900 rounded-lg p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Entre em contato</h3>
+                        <p class="text-gray-400 mb-6">
+                            Tem um projeto em mente ou quer conversar sobre código? Estou disponível para novas oportunidades.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-primary w-6"></i>
+                                <span class="ml-3">mateus@ocodigoeobug.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-primary w-6"></i>
+                                <span class="ml-3">São Paulo, Brasil</span>
+                            </div>
+                            <div class="flex space-x-4 mt-6">
+                                <a href="#" class="text-gray-400 hover:text-primary">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-primary">
+                                    <i class="fab fa-linkedin text-xl"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-primary">
+                                    <i class="fab fa-twitter text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <form>
+                            <div class="mb-4">
+                                <input type="text" placeholder="Nome" class="w-full p-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-primary">
+                            </div>
+                            <div class="mb-4">
+                                <input type="email" placeholder="Email" class="w-full p-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-primary">
+                            </div>
+                            <div class="mb-4">
+                                <textarea placeholder="Mensagem" rows="4" class="w-full p-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-primary"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-4 py-2 bg-primary hover:bg-primary/80 text-white rounded-md">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-main text-white py-6">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Mateus Jose da Silva. Todos os direitos reservados.</p>
+    <footer class="py-6 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="text-lg font-bold code-text mb-2">
+                <span class="text-white">&lt;</span>Mateus<span class="text-accent">/</span><span class="text-white">&gt;</span>
+            </div>
+            <p class="text-gray-400 text-sm">© 2025 - Artista de Código</p>
         </div>
     </footer>
-    <script src="scripts/index.js"></script>
-</body>
 
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.createElement('div');
+            menu.className = 'fixed inset-0 bg-gray-900/95 z-20 flex flex-col items-center justify-center';
+            menu.innerHTML = `
+                <button class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <div class="flex flex-col space-y-4 text-lg">
+                    <a href="#home" class="px-3 py-2 text-primary hover:text-white">Home</a>
+                    <a href="#sobre" class="px-3 py-2 text-gray-300 hover:text-white">Sobre</a>
+                    <a href="#projetos" class="px-3 py-2 text-gray-300 hover:text-white">Projetos</a>
+                    <a href="#blog" class="px-3 py-2 text-gray-300 hover:text-white">Blog</a>
+                    <a href="#contato" class="px-3 py-2 text-gray-300 hover:text-white">Contato</a>
+                </div>
+            `;
+            document.body.appendChild(menu);
+            
+            menu.querySelector('button').addEventListener('click', function() {
+                document.body.removeChild(menu);
+            });
+            
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    document.body.removeChild(menu);
+                });
+            });
+        });
+    </script>
+</body>
 </html>
