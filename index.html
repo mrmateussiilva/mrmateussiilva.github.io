@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,23 +24,32 @@
         .geometric-bg {
             background-image: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, rgba(99, 102, 241, 0.05) 90%);
         }
-        
+
         .code-text {
             font-family: 'Fira Code', monospace, consolas;
         }
-        
+
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
-        
+
         .float {
             animation: float 6s ease-in-out infinite;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
+
 <body class="dark:bg-dark text-gray-100 geometric-bg min-h-screen">
 
     <!-- Navigation -->
@@ -47,7 +57,8 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex items-center justify-between h-16">
                 <div class="text-xl font-bold code-text text-primary">
-                    <span class="text-white">&lt;</span>Mateus<span class="text-accent">/</span><span class="text-white">&gt;</span>
+                    <span class="text-white">&lt;</span>Mateus JSilva<span class="text-accent">/</span><span
+                        class="text-white">&gt;</span>
                 </div>
                 <div class="hidden md:flex space-x-4">
                     <a href="#home" class="px-3 py-2 text-primary hover:text-white">Home</a>
@@ -57,8 +68,10 @@
                     <a href="#contato" class="px-3 py-2 text-gray-300 hover:text-white">Contato</a>
                 </div>
                 <button id="menu-toggle" class="md:hidden text-gray-400 hover:text-white">
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
@@ -80,7 +93,8 @@
                         </h2>
                         <div class="bg-gray-900 p-4 rounded-md code-text text-sm text-green-400 mt-4">
                             <p>&gt; const <span class="text-primary">minhaMissão</span> = () =&gt; {</p>
-                            <p class="pl-4">return "<span class="text-white">Transformar problemas complexos em</span></p> 
+                            <p class="pl-4">return "<span class="text-white">Transformar problemas complexos em</span>
+                            </p>
                             <p class="pl-4"><span class="text-white">soluções elegantes através do código</span>";</p>
                             <p>};</p>
                         </div>
@@ -88,7 +102,8 @@
                             <a href="#projetos" class="px-6 py-2 bg-primary hover:bg-primary/80 text-white rounded-md">
                                 Ver Projetos
                             </a>
-                            <a href="#contato" class="px-6 py-2 border border-primary text-primary hover:bg-primary/10 rounded-md">
+                            <a href="#contato"
+                                class="px-6 py-2 border border-primary text-primary hover:bg-primary/10 rounded-md">
                                 Contato
                             </a>
                         </div>
@@ -120,16 +135,17 @@
                 <span class="text-primary code-text">// Sobre mim</span>
                 <h2 class="text-3xl font-bold mt-2">O artista por trás do código</h2>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-gray-900 rounded-lg p-4">
                     <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary/20 mb-4">
                         <i class="fas fa-user-astronaut text-primary"></i>
                     </div>
                     <h3 class="text-lg font-bold mb-2">Minha Jornada</h3>
-                    <p class="text-gray-400 text-sm">Sou apaixonado por criar soluções que combinam funcionalidade e estética, vendo cada linha de código como uma pincelada em uma tela digital.</p>
+                    <p class="text-gray-400 text-sm">Sou apaixonado por criar soluções que combinam funcionalidade e
+                        estética, vendo cada linha de código como uma pincelada em uma tela digital.</p>
                 </div>
-                
+
                 <div class="bg-gray-900 rounded-lg p-4">
                     <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary/20 mb-4">
                         <i class="fas fa-laptop-code text-primary"></i>
@@ -156,7 +172,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="bg-gray-900 rounded-lg p-4">
                     <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary/20 mb-4">
                         <i class="fas fa-cogs text-primary"></i>
@@ -171,14 +187,15 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="mt-8 bg-gray-900 rounded-lg p-4">
                 <div class="flex items-center gap-3 mb-2">
                     <i class="fas fa-quote-left text-accent"></i>
                     <h3 class="text-lg font-bold">"O Código e o Bug"</h3>
                 </div>
                 <p class="text-gray-300 text-sm">
-                    Meu blog é uma expressão da minha filosofia como programador. Para mim, códigos são mais que instruções—são expressões artísticas que resolvem problemas do mundo real.
+                    Meu blog é uma expressão da minha filosofia como programador. Para mim, códigos são mais que
+                    instruções—são expressões artísticas que resolvem problemas do mundo real.
                 </p>
             </div>
         </div>
@@ -191,7 +208,7 @@
                 <span class="text-primary code-text">/* Projetos */</span>
                 <h2 class="text-3xl font-bold mt-2">Meus trabalhos recentes</h2>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Project 1 -->
                 <div class="bg-gray-900 rounded-lg overflow-hidden">
@@ -207,7 +224,8 @@
                                 <span class="text-xs px-2 py-1 bg-primary/20 text-primary rounded">React</span>
                             </div>
                         </div>
-                        <p class="text-gray-400 text-sm mb-3">Sistema completo de gestão empresarial com dashboards interativos.</p>
+                        <p class="text-gray-400 text-sm mb-3">Sistema completo de gestão empresarial com dashboards
+                            interativos.</p>
                         <div class="flex space-x-4 text-sm">
                             <a href="#" class="text-primary">
                                 <i class="fab fa-github"></i> GitHub
@@ -218,7 +236,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
                 <div class="bg-gray-900 rounded-lg overflow-hidden">
                     <div class="h-48 bg-gray-800 flex items-center justify-center">
@@ -233,7 +251,8 @@
                                 <span class="text-xs px-2 py-1 bg-primary/20 text-primary rounded">React Native</span>
                             </div>
                         </div>
-                        <p class="text-gray-400 text-sm mb-3">Aplicativo mobile para gerenciamento de tarefas com sistema de gamificação.</p>
+                        <p class="text-gray-400 text-sm mb-3">Aplicativo mobile para gerenciamento de tarefas com
+                            sistema de gamificação.</p>
                         <div class="flex space-x-4 text-sm">
                             <a href="#" class="text-primary">
                                 <i class="fab fa-github"></i> GitHub
@@ -256,7 +275,7 @@
                 <h2 class="text-3xl font-bold mt-2">O Código e o Bug</h2>
                 <p class="text-gray-400 mt-2 text-sm">Compartilhando conhecimento sobre programação.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Blog Post 1 -->
                 <div class="bg-gray-900 rounded-lg overflow-hidden">
@@ -278,7 +297,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Blog Post 2 -->
                 <div class="bg-gray-900 rounded-lg overflow-hidden">
                     <div class="h-32 bg-gray-800 flex items-center justify-center">
@@ -299,7 +318,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Blog Post 3 -->
                 <div class="bg-gray-900 rounded-lg overflow-hidden">
                     <div class="h-32 bg-gray-800 flex items-center justify-center">
@@ -324,6 +343,20 @@
         </div>
     </section>
 
+    <!-- Livros -->
+    <section id="livros" class="py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <span class="text-primary code-text">// Livros em leitura</span>
+                <h2 class="text-3xl font-bold mt-2">Estudos e Inspirações</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="container-books">
+
+                <!-- Adicione outros livros aqui -->
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contato" class="py-12">
         <div class="max-w-6xl mx-auto px-4">
@@ -331,22 +364,23 @@
                 <span class="text-primary code-text">// Contato</span>
                 <h2 class="text-3xl font-bold mt-2">Vamos Conversar</h2>
             </div>
-            
+
             <div class="bg-gray-900 rounded-lg p-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <h3 class="text-xl font-bold mb-4">Entre em contato</h3>
                         <p class="text-gray-400 mb-6">
-                            Tem um projeto em mente ou quer conversar sobre código? Estou disponível para novas oportunidades.
+                            Tem um projeto em mente ou quer conversar sobre código? Estou disponível para novas
+                            oportunidades.
                         </p>
                         <div class="space-y-4">
                             <div class="flex items-center">
                                 <i class="fas fa-envelope text-primary w-6"></i>
-                                <span class="ml-3">mateus@ocodigoeobug.com</span>
+                                <span class="ml-3">finderbit1@gmail.com</span>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-map-marker-alt text-primary w-6"></i>
-                                <span class="ml-3">São Paulo, Brasil</span>
+                                <span class="ml-3">Espírito Santo, Brasil</span>
                             </div>
                             <div class="flex space-x-4 mt-6">
                                 <a href="#" class="text-gray-400 hover:text-primary">
@@ -362,17 +396,21 @@
                         </div>
                     </div>
                     <div>
-                        <form>
+                        <form action="https://formspree.io/f/xldjoqvj" method="POST">
                             <div class="mb-4">
-                                <input type="text" placeholder="Nome" class="w-full p-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-primary">
+                                <input type="text" name="nome" placeholder="Nome" required
+                                    class="w-full p-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-primary">
                             </div>
                             <div class="mb-4">
-                                <input type="email" placeholder="Email" class="w-full p-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-primary">
+                                <input type="email" name="email" placeholder="Email" required
+                                    class="w-full p-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-primary">
                             </div>
                             <div class="mb-4">
-                                <textarea placeholder="Mensagem" rows="4" class="w-full p-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-primary"></textarea>
+                                <textarea name="mensagem" placeholder="Mensagem" rows="4" required
+                                    class="w-full p-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-primary"></textarea>
                             </div>
-                            <button type="submit" class="w-full px-4 py-2 bg-primary hover:bg-primary/80 text-white rounded-md">
+                            <button type="submit"
+                                class="w-full px-4 py-2 bg-primary hover:bg-primary/80 text-white rounded-md">
                                 Enviar Mensagem
                             </button>
                         </form>
@@ -386,15 +424,42 @@
     <footer class="py-6 border-t border-gray-800">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <div class="text-lg font-bold code-text mb-2">
-                <span class="text-white">&lt;</span>Mateus<span class="text-accent">/</span><span class="text-white">&gt;</span>
+                <span class="text-white">&lt;</span>Mateus JSilva<span class="text-accent">/</span><span
+                    class="text-white">&gt;</span>
             </div>
             <p class="text-gray-400 text-sm">© 2025 - Artista de Código</p>
         </div>
     </footer>
 
     <script>
+        const books = [
+            { name: "Clean Code", author: "Robert C. Martin", link: "/blog/clean-code.html" },
+            { name: "Introdução à Programação com Python", author: "Nilo Ney Coutinho Menezes", link: "/blog/clean-code.html" },
+            {
+                name: "Entendendo Algoritmos",
+                author: "Aditya Bhargava", link: "/blog/entendendo-algoritmos.html"
+            }
+        ];
+
+        function preencherBooks(books) {
+            const container = document.getElementById("container-books");
+            books.forEach(book => {
+                const content = document.createElement("div");
+                content.className = "bg-gray-900 p-4 rounded-lg";
+                content.innerHTML = `
+            <h3 class="text-lg font-bold mb-1">${book.name}</h3>
+            <p class="text-gray-400 text-sm mb-2">${book.author}</p>
+            <a href="${book.link}" class="text-primary text-xs">Ler mais</a>
+        `;
+                container.appendChild(content);
+            });
+        }
+
+        preencherBooks(books);
+
+
         // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
+        document.getElementById('menu-toggle').addEventListener('click', function () {
             const menu = document.createElement('div');
             menu.className = 'fixed inset-0 bg-gray-900/95 z-20 flex flex-col items-center justify-center';
             menu.innerHTML = `
@@ -412,27 +477,28 @@
                 </div>
             `;
             document.body.appendChild(menu);
-            
-            menu.querySelector('button').addEventListener('click', function() {
+
+            menu.querySelector('button').addEventListener('click', function () {
                 document.body.removeChild(menu);
             });
-            
+
             menu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function () {
                     document.body.removeChild(menu);
                 });
             });
         });
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  });
-});
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            });
+        });
 
     </script>
 </body>
+
 </html>
