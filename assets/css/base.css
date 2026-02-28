@@ -1,47 +1,54 @@
 body {
-    font-family: 'Arial', sans-serif;
-    scroll-behavior: smooth; /* Rolagem suave */
+    font-family: 'Space Grotesk', 'Inter', Arial Black, sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* Cores personalizadas */
 .bg-main {
-    background: linear-gradient(to right, #1e3a8a, #3b82f6); /* Azul degradê */
+    background-color: #F4F4F4;
 }
 
 .bg-light {
-    background-color: #f0f9ff; /* Azul claro */
+    background-color: #FFFFFF;
 }
 
 .bg-accent {
-    background-color: #3b82f6; /* Azul vibrante */
+    background-color: #3B5BFF;
 }
 
 .text-main {
-    color: #1e3a8a; /* Azul escuro */
+    color: #111111;
 }
 
 .text-light {
-    color: #3b82f6; /* Azul vibrante */
+    color: #333333;
 }
 
 .text-accent {
-    color: #2563eb; /* Azul mais suave */
+    color: #FF3B3B;
 }
 
 .hover\:bg-accent:hover {
-    background-color: #2563eb;
+    background-color: #FF3B3B;
 }
 
-/* Customização de campos de formulário */
 input, textarea {
-    border-radius: 0.375rem;
-    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    border: 3px solid #111111;
     padding: 0.75rem;
     width: 100%;
     margin-bottom: 1rem;
+    background-color: #FFFFFF;
+    color: #111111;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #333333;
 }
 
 input:focus, textarea:focus {
     outline: none;
-    border-color: #3b82f6;
+    box-shadow: 4px 4px 0px #FF3B3B;
+    border-color: #111111;
 }
