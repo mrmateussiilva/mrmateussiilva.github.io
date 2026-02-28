@@ -190,6 +190,124 @@
             color: #FF3B3B;
             letter-spacing: 0.05em;
         }
+
+        /* Dark Mode Styles */
+        body.dark {
+            background-color: #111111;
+            color: #F4F4F4;
+        }
+
+        body.dark .bg-bg,
+        body.dark .geometric-bg,
+        body.dark section {
+            background-color: #111111;
+        }
+
+        body.dark nav,
+        body.dark footer {
+            background-color: #111111;
+            border-color: #F4F4F4;
+        }
+
+        body.dark .text-dark {
+            color: #F4F4F4;
+        }
+
+        body.dark .text-light {
+            color: #CCCCCC;
+        }
+
+        body.dark .card-neo,
+        body.dark .btn-secondary,
+        body.dark .input-neo {
+            background-color: #1A1A1A;
+            border-color: #F4F4F4;
+            box-shadow: 6px 6px 0px #F4F4F4;
+        }
+
+        body.dark .btn-primary {
+            background-color: #FF3B3B;
+            border-color: #F4F4F4;
+            box-shadow: 4px 4px 0px #F4F4F4;
+            color: white;
+        }
+
+        body.dark .btn-primary:hover {
+            box-shadow: 2px 2px 0px #F4F4F4;
+        }
+
+        body.dark .btn-secondary {
+            color: #F4F4F4;
+        }
+
+        body.dark .btn-secondary:hover {
+            background-color: #F4F4F4;
+            color: #111111;
+        }
+
+        body.dark .neo-border {
+            border-color: #F4F4F4;
+        }
+
+        body.dark .neo-shadow-sm {
+            box-shadow: 4px 4px 0px #F4F4F4;
+        }
+
+        body.dark .nav-link {
+            color: #F4F4F4;
+        }
+
+        body.dark .nav-link:hover {
+            background-color: #F4F4F4;
+            color: #111111;
+        }
+
+        body.dark .tag-neo {
+            background-color: #3B5BFF;
+            border-color: #F4F4F4;
+        }
+
+        body.dark .input-neo {
+            background-color: #1A1A1A;
+            border-color: #F4F4F4;
+            color: #F4F4F4;
+        }
+
+        body.dark .input-neo::placeholder {
+            color: #888888;
+        }
+
+        body.dark .input-neo:focus {
+            box-shadow: 4px 4px 0px #FF3B3B;
+        }
+
+        body.dark footer .neo-border {
+            background-color: #111111;
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            background-color: #FF3B3B;
+            border: 3px solid #111111;
+            box-shadow: 4px 4px 0px #111111;
+            padding: 0.5rem 0.75rem;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.15s ease;
+            font-size: 1rem;
+        }
+
+        .theme-toggle:hover {
+            box-shadow: 2px 2px 0px #111111;
+            transform: translate(2px, 2px);
+        }
+
+        #menu-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
@@ -204,15 +322,18 @@
                     <span class="text-dark">&lt;</span>Mateus JSilva<span class="text-secondary">/</span><span
                         class="text-dark">&gt;</span>
                 </div>
-                <div class="hidden md:flex space-x-4">
+                <div class="hidden md:flex items-center space-x-4">
                     <a href="#home" class="px-3 py-2 nav-link">Home</a>
                     <a href="#sobre" class="px-3 py-2 nav-link">Sobre</a>
                     <a href="#projetos" class="px-3 py-2 nav-link">Projetos</a>
                     <a href="#blog" class="px-3 py-2 nav-link">Blog</a>
                     <a href="#contato" class="px-3 py-2 nav-link">Contato</a>
+                    <button id="theme-toggle" class="theme-toggle" title="Alternar tema">
+                        🌙
+                    </button>
                 </div>
-                <button id="menu-toggle" class="md:hidden text-dark font-bold">
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    <button id="menu-toggle" class="md:hidden text-dark font-bold" style="background: none; border: none; cursor: pointer;">
+                    <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                             d="M4 6h16M4 12h16M4 18h16" />
@@ -605,7 +726,7 @@
         document.getElementById('menu-toggle').addEventListener('click', function () {
             const menu = document.createElement('div');
             menu.className = 'fixed inset-0 z-20 flex flex-col items-center justify-center';
-            menu.style.backgroundColor = '#F4F4F4';
+            menu.style.backgroundColor = document.body.classList.contains('dark') ? '#111111' : '#F4F4F4';
             menu.innerHTML = `
                 <button class="absolute top-4 right-4 text-dark font-bold">
                     <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -613,11 +734,12 @@
                     </svg>
                 </button>
                 <div class="flex flex-col space-y-4 text-lg">
-                    <a href="#home" class="px-3 py-2 nav-link" style="color: #111;">Home</a>
-                    <a href="#sobre" class="px-3 py-2 nav-link" style="color: #111;">Sobre</a>
-                    <a href="#projetos" class="px-3 py-2 nav-link" style="color: #111;">Projetos</a>
-                    <a href="#blog" class="px-3 py-2 nav-link" style="color: #111;">Blog</a>
-                    <a href="#contato" class="px-3 py-2 nav-link" style="color: #111;">Contato</a>
+                    <a href="#home" class="px-3 py-2 nav-link" style="color: ${document.body.classList.contains('dark') ? '#F4F4F4' : '#111'};" >Home</a>
+                    <a href="#sobre" class="px-3 py-2 nav-link" style="color: ${document.body.classList.contains('dark') ? '#F4F4F4' : '#111'};">Sobre</a>
+                    <a href="#projetos" class="px-3 py-2 nav-link" style="color: ${document.body.classList.contains('dark') ? '#F4F4F4' : '#111'};">Projetos</a>
+                    <a href="#blog" class="px-3 py-2 nav-link" style="color: ${document.body.classList.contains('dark') ? '#F4F4F4' : '#111'};">Blog</a>
+                    <a href="#contato" class="px-3 py-2 nav-link" style="color: ${document.body.classList.contains('dark') ? '#F4F4F4' : '#111'};">Contato</a>
+                    <button id="mobile-theme-toggle" class="theme-toggle mx-auto mt-4">${document.body.classList.contains('dark') ? '☀️' : '🌙'}</button>
                 </div>
             `;
             document.body.appendChild(menu);
@@ -631,6 +753,19 @@
                     document.body.removeChild(menu);
                 });
             });
+
+            document.getElementById('mobile-theme-toggle').addEventListener('click', function() {
+                document.body.classList.toggle('dark');
+                
+                if (document.body.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark');
+                    themeToggle.textContent = '☀️';
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    themeToggle.textContent = '🌙';
+                }
+                document.body.removeChild(menu);
+            });
         });
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener("click", function (e) {
@@ -640,6 +775,27 @@
                     target.scrollIntoView({ behavior: "smooth", block: "start" });
                 }
             });
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const savedTheme = localStorage.getItem('theme');
+        
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark');
+            themeToggle.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark');
+            
+            if (document.body.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.textContent = '☀️';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.textContent = '🌙';
+            }
         });
 
     </script>
