@@ -191,90 +191,106 @@
             letter-spacing: 0.05em;
         }
 
-        /* Dark Mode Styles */
+        /* Dark Mode Styles - Neobrutalismo Dark */
         body.dark {
             background-color: #111111;
-            color: #F4F4F4;
+            color: #FFFFFF;
         }
 
         body.dark .bg-bg,
-        body.dark .geometric-bg,
-        body.dark section {
+        body.dark .geometric-bg {
             background-color: #111111;
+        }
+
+        body.dark section {
+            background-color: #1A1A1A;
         }
 
         body.dark nav,
         body.dark footer {
             background-color: #111111;
-            border-color: #F4F4F4;
+            border-color: #FFFFFF;
+        }
+
+        body.dark footer {
+            border-top: 3px solid #FFFFFF;
         }
 
         body.dark .text-dark {
-            color: #F4F4F4;
+            color: #FFFFFF;
         }
 
         body.dark .text-light {
-            color: #CCCCCC;
+            color: #CFCFCF;
         }
 
-        body.dark .card-neo,
-        body.dark .btn-secondary,
-        body.dark .input-neo {
-            background-color: #1A1A1A;
-            border-color: #F4F4F4;
-            box-shadow: 6px 6px 0px #F4F4F4;
+        body.dark .card-neo {
+            background-color: #222222;
+            border: 3px solid #FFFFFF;
+            box-shadow: 6px 6px 0px #000000;
         }
 
         body.dark .btn-primary {
             background-color: #FF3B3B;
-            border-color: #F4F4F4;
-            box-shadow: 4px 4px 0px #F4F4F4;
-            color: white;
+            border: 3px solid #FFFFFF;
+            box-shadow: 4px 4px 0px #000000;
+            color: #FFFFFF;
         }
 
         body.dark .btn-primary:hover {
-            box-shadow: 2px 2px 0px #F4F4F4;
+            box-shadow: none;
+            transform: translate(4px, 4px);
         }
 
         body.dark .btn-secondary {
-            color: #F4F4F4;
+            background-color: transparent;
+            border: 3px solid #FFFFFF;
+            box-shadow: 4px 4px 0px #000000;
+            color: #FFFFFF;
         }
 
         body.dark .btn-secondary:hover {
-            background-color: #F4F4F4;
+            background-color: #FFFFFF;
             color: #111111;
+            box-shadow: none;
+            transform: translate(4px, 4px);
         }
 
         body.dark .neo-border {
-            border-color: #F4F4F4;
+            border: 3px solid #FFFFFF;
+        }
+
+        body.dark .neo-shadow {
+            box-shadow: 6px 6px 0px #000000;
         }
 
         body.dark .neo-shadow-sm {
-            box-shadow: 4px 4px 0px #F4F4F4;
+            box-shadow: 4px 4px 0px #000000;
         }
 
         body.dark .nav-link {
-            color: #F4F4F4;
+            color: #FFFFFF;
+            border: 2px solid transparent;
         }
 
         body.dark .nav-link:hover {
-            background-color: #F4F4F4;
+            background-color: #FFFFFF;
             color: #111111;
         }
 
         body.dark .tag-neo {
             background-color: #3B5BFF;
-            border-color: #F4F4F4;
+            border: 2px solid #FFFFFF;
         }
 
         body.dark .input-neo {
-            background-color: #1A1A1A;
-            border-color: #F4F4F4;
-            color: #F4F4F4;
+            background-color: #222222;
+            border: 3px solid #FFFFFF;
+            color: #FFFFFF;
         }
 
         body.dark .input-neo::placeholder {
-            color: #888888;
+            color: #CFCFCF;
         }
 
         body.dark .input-neo:focus {
@@ -283,6 +299,179 @@
 
         body.dark footer .neo-border {
             background-color: #111111;
+            border: 3px solid #FFFFFF;
+        }
+
+        /* Hero Section Dark */
+        body.dark #home {
+            background-color: #111111;
+        }
+
+        body.dark #home .card-neo {
+            background-color: #1A1A1A;
+            border: 3px solid #FFFFFF;
+            box-shadow: 6px 6px 0px #000000;
+        }
+
+        body.dark #home .geometric-bg {
+            background-color: #111111;
+        }
+
+        body.dark #home .neo-border {
+            border: 2px solid #FFFFFF;
+        }
+
+        /* Theme Toggle Dark */
+        body.dark .theme-toggle {
+            background-color: #FF3B3B;
+            border: 3px solid #FFFFFF;
+            box-shadow: 4px 4px 0px #000000;
+        }
+
+        body.dark .theme-toggle:hover {
+            box-shadow: none;
+            transform: translate(4px, 4px);
+        }
+
+        /* Projects Section Dark */
+        body.dark #projetos {
+            background-color: #1A1A1A;
+        }
+
+        body.dark #projetos .card-neo > div:first-child {
+            background-color: #222222 !important;
+            border-bottom: 3px solid #FFFFFF !important;
+        }
+
+        /* Blog Section Dark */
+        body.dark #blog {
+            background-color: #1A1A1A;
+        }
+
+        body.dark #blog .card-neo > div:first-child {
+            background-color: #222222 !important;
+            border-bottom: 3px solid #FFFFFF !important;
+        }
+
+        /* Books Section Dark */
+        body.dark #livros {
+            background-color: #1A1A1A;
+        }
+
+        /* Contact Section Dark */
+        body.dark #contato {
+            background-color: #1A1A1A;
+        }
+
+        body.dark #contato .card-neo {
+            background-color: #222222;
+        }
+
+        /* About Section Dark */
+        body.dark #sobre {
+            background-color: #1A1A1A;
+        }
+
+        /* Mobile Menu Dark */
+        body.dark #menu-toggle {
+            color: #FFFFFF;
+        }
+
+        body.dark .section-subtitle {
+            color: #FF3B3B;
+        }
+
+        /* Hero Code Box Dark */
+        body.dark #home .neo-border.code-text {
+            background-color: #222222;
+            color: #FFFFFF;
+        }
+
+        /* About Section Quote Dark */
+        body.dark #sobre .fas.fa-quote-left {
+            color: #3B5BFF;
+        }
+
+        /* Links Dark Mode */
+        body.dark a:not(.btn-primary):not(.btn-secondary):not(.nav-link) {
+            color: #FF3B3B;
+        }
+
+        body.dark a:not(.btn-primary):not(.btn-secondary):not(.nav-link):hover {
+            color: #3B5BFF;
+        }
+
+        /* Contact Icons Dark */
+        body.dark #contato .fas.fa-envelope {
+            color: #FF3B3B;
+        }
+
+        body.dark #contato .fas.fa-map-marker-alt {
+            color: #3B5BFF;
+        }
+
+        body.dark #contato .fab.fa-github,
+        body.dark #contato .fab.fa-linkedin,
+        body.dark #contato .fab.fa-twitter {
+            color: #FFFFFF;
+        }
+
+        body.dark #contato .fab.fa-github:hover,
+        body.dark #contato .fab.fa-linkedin:hover,
+        body.dark #contato .fab.fa-twitter:hover {
+            color: #FF3B3B;
+        }
+
+        /* Skill Bars Dark */
+        body.dark #sobre .w-24.h-3 {
+            background-color: #222222;
+            border: 2px solid #FFFFFF;
+        }
+
+        body.dark #sobre .w-24.h-3 .h-full {
+            background-color: #FF3B3B;
+        }
+
+        /* Floating Icon Dark */
+        body.dark #home .text-8xl .neo-border.neo-shadow {
+            background-color: #FF3B3B;
+            border: 3px solid #FFFFFF;
+            box-shadow: 6px 6px 0px #000000;
+        }
+
+        /* Footer Logo Dark */
+        body.dark footer .neo-border.inline-block {
+            background-color: #111111 !important;
+            border: 3px solid #FFFFFF;
+        }
+
+        /* Hero Code Box Inline Styles Override */
+        body.dark #home .bg-bg.p-4.neo-border.code-text {
+            background-color: #222222 !important;
+            border: 2px solid #FFFFFF !important;
+            color: #FFFFFF !important;
+        }
+
+        /* Navbar Logo Dark */
+        body.dark nav .text-xl.font-bold.code-text {
+            color: #FF3B3B !important;
+        }
+
+        body.dark nav .text-xl.font-bold.code-text .text-dark {
+            color: #FFFFFF !important;
+        }
+
+        /* Mobile Theme Toggle */
+        body.dark .theme-toggle.mx-auto {
+            background-color: #FF3B3B;
+            border: 3px solid #FFFFFF;
+            box-shadow: 4px 4px 0px #000000;
+            color: #FFFFFF;
+        }
+
+        body.dark .theme-toggle.mx-auto:hover {
+            box-shadow: none;
+            transform: translate(4px, 4px);
         }
 
         /* Theme Toggle Button */
